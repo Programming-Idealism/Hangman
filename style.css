@@ -1,0 +1,269 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 120svh;
+}
+
+.outer-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d1117;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 93%;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 30px;
+    transition: all 500ms ease-in-out;
+    &:hover {
+        background-color: white;
+        transform: scale(1.02);
+    }
+}
+
+.headline-container {
+    width: 300px;
+    margin-top: -60px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.0rem;
+    position: relative;
+}
+
+#headline-image {
+    width: 300px;
+    border: 13px ridge crimson;
+    border-radius: 30px;
+}
+
+.headliner-paragraph {
+    font-size: 1.041rem;
+}
+
+.headline-image-wrapper::before {
+    content: "☠️";
+    font-size: 4rem;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    transition: all 400ms ease-in-out;
+}
+
+.headline-image-wrapper:hover::before {
+    transform: rotate(360deg);
+}
+
+.headline-image-wrapper::after {
+    content: "☠️";
+    font-size: 4rem;
+    position: absolute;
+    top: 30%;
+    right: 100%;
+    transition: all 400ms ease-in-out;
+}
+
+.headline-image-wrapper:hover::after {
+    transform: rotate(360deg);
+}
+
+.hidden {
+    display: none;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lives-icon {
+    width: 55px;
+    margin-top: 20px;
+}
+
+.lives-display {
+    display: flex;
+    justify-content: center;
+}
+
+#game-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+#input-element {
+    margin: 10px 0px 8px 0px;
+}
+
+.start-button, .reset-button {
+    margin-top: 30px;
+    background-color: hsl(0, 0%, 0%);
+    color: whitesmoke;
+    padding: 7px 12px;
+    border-radius: 20px;
+    border: none;
+    font: bold 1.3rem roboto;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+
+    &:hover {
+        background-color: hsl(0, 0%, 10%);
+        transform: scale(1.15);
+    }
+}
+
+.tutorial > span {
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.tutorial {
+    background-color: navy;
+    color: white;
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    font-family: roboto;
+    font-size: 1.1rem;
+    border-radius: 10px 20px;
+}
+
+h1 {
+    font-family: verdana;
+    -webkit-text-stroke: 1px blue;
+    text-shadow: 0px 0px 20px blue;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-family: fantasy;
+    color: darkred;
+    margin-top: 5px;
+    text-shadow: 5px 5px 10px black;
+}
+
+#input-element {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.message {
+    margin-top: 7px;
+    font-weight: bold;
+}
+
+
+/* Mobile Optimzation */
+
+@media (max-width: 480px) {
+    
+body {
+    height: 130svh;
+}
+
+.outer-container {
+    width: 100%;
+    height: 100%;
+}
+
+.game-container {
+    width: 80%;
+    height: 93%;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+.lives-icon {
+    width: 40px;
+    margin-top: 20px;
+}
+
+#game-text {
+    font-size: 0.8rem;
+}
+
+#input-element {
+    font-size: 1rem;
+    width: 250px;
+}
+
+.headline-container {
+    width: 80%;
+    max-width: 200px;
+    margin-top: -200px;
+    font-size: 1.0rem;
+}
+
+#headline-image {
+    width: 150px;
+    border: 7px ridge crimson;
+    margin-top: 100px;
+}
+
+.headliner-paragraph {
+    top: 60%;
+    font-size: 0.7rem;
+}
+
+.headline-image-wrapper::before {
+    font-size: 2.5rem;
+    top: 37%;
+    left: 85%;
+}
+
+
+
+.headline-image-wrapper::after {
+    font-size: 2.5rem;
+    top: 37%;
+    right: 85%;
+}
+
+.start-button, .reset-button {
+    margin-top: 50px;
+    padding: 7px 12px;
+}
+
+.tutorial > span {
+    font-size: 1.2rem;
+}
+
+.tutorial {
+    font-size: 1rem;
+}
+}
