@@ -8,7 +8,7 @@
 
 body {
     display: flex;
-    height: 120svh;
+    height: 125svh;
 }
 
 .outer-container {
@@ -52,6 +52,7 @@ body {
     width: 300px;
     border: 13px ridge crimson;
     border-radius: 30px;
+    margin-top: 55px;
 }
 
 .headliner-paragraph {
@@ -62,7 +63,7 @@ body {
     content: "☠️";
     font-size: 4rem;
     position: absolute;
-    top: 20%;
+    top: 26%;
     left: 100%;
     transition: all 400ms ease-in-out;
 }
@@ -75,7 +76,7 @@ body {
     content: "☠️";
     font-size: 4rem;
     position: absolute;
-    top: 20%;
+    top: 26%;
     right: 100%;
     transition: all 400ms ease-in-out;
 }
